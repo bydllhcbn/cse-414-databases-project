@@ -1,0 +1,98 @@
+<input type="hidden" value="{{event.id}}" name="eventId"/>
+
+<div class="form-group">
+    <label for="eventGroupName">Etkinlik Grubu</label>
+    <input required id="eventGroupName" type="text" class="form-control" disabled
+           value="{{eventGroup.event_name}}"/>
+</div>
+<input type="hidden" name="placeId" id="placeId" value="{{event.place_id}}"/>
+<div class="form-group">
+    <label for="place">Mekan</label>
+    <select class="form-control" id="place" disabled>
+        {{#each places}}
+            <option value="{{this.id}}" {{#ifeq ../event.place_id this.id}}
+                    selected {{/ifeq}} >{{this.place_name}}</option>
+        {{/each}}
+    </select>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="startDate">Başlangıç Tarihi</label>
+            <input disabled autocomplete="off" type="date" class="form-control" id="startDate" name="startDate"
+                   value="{{event.start_date}}">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="endDate">Bitiş Tarihi</label>
+            <input disabled required autocomplete="off" type="date" class="form-control" id="endDate" name="endDate"
+                   value="{{event.end_date}}">
+        </div>
+    </div>
+</div>
+
+
+{{#each prices}}
+    <div class="form-group">
+        <label for="price-{{this.id}}">Bilet Fiyatı - {{this.section_name}} </label>
+        <input required class="form-control" id="price-{{this.id}}" type="number" name="price-{{this.id}}"
+               value="{{this.price}}">
+    </div>
+{{/each}}
+
+{{#isNotEmpty rules}}
+    <h5 class="card-header mb-2">Etkinlik Kuralları</h5>
+
+
+    <ul class="list-group">
+        {{#each rules}}
+            <li class="list-group-item">{{this.rule}}</li>
+        {{/each}}
+    </ul>
+{{/isNotEmpty}}
+
+
+{{#if event.isStarted}}
+    <p>Etkinlik başladı. Artık bilet alamazsınız</p>
+{{else}}
+    {{#if auth_id}}
+        <h4 class="mt-4 mb-4">Bilet Al</h4>
+
+        <form method="post" action="/event/buyTicket">
+            <input type="hidden" name="event" value="{{event.id}}"/>
+            <div class="form-group">
+                <label for="category">Bilet Kategorisi</label>
+                <select class="form-control" name="category" id="category">
+                    {{#each ticketCategories}}
+                        <option value="{{this.id}}">{{this.category_name}} (%{{this.discount}} indirim)</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div class="form-group">
+                {{#if discount}}
+                    <p>Kampanya nedeniyle ekstra %{{discount.discount}}  indirim uygulanacaktır.</p>
+                    <input type="hidden" name="discount" value="{{discount.discount}}">
+                {{else}}
+                    <input type="hidden" name="discount" value="0">
+                {{/if}}
+            </div>
+            <div class="form-group">
+                <label for="seat">Boş Koltuklar</label>
+                <select class="form-control" name="seat" id="seat">
+                    {{#each eventSeats}}
+                        <option value="{{this.seat_id}}"> (Mekan: {{this.place_name}}) -
+                            (Koltuk: {{this.seat_number}})
+                        </option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Bilet Al</button>
+        </form>
+
+    {{/if}}
+
+{{/if}}

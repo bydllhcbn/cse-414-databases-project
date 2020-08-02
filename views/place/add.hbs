@@ -1,0 +1,24 @@
+<form method="post" action="/place/add">
+    <div class="form-group">
+        <label for="city">İsim</label>
+        <select autocomplete="off" type="text" class="form-control" id="city" name="city">
+            {{#each cities}}
+                <option value="{{this.id}}">{{this.city_name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="name">İsim</label>
+        <input autocomplete="off" type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="allowedCategories">İzin Verilen Kategoriler</label>
+        <select class="select2 w-100" multiple name="allowedCategories" id="allowedCategories">
+            {{#each categories}}
+                <option value="{{this.id}}">{{this.category_name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>

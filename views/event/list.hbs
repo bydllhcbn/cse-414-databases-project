@@ -1,0 +1,10 @@
+<ul class="list-group">
+    <a href="/event/add/{{eventGroup.id}}" class="list-group-item list-group-item-action active">+ Yeni Etkinlik Ekle</a>
+    {{#each events}}
+        <a class="list-group-item list-group-item-action" href="/event/edit/{{this.id}}">
+            <b>{{../eventGroup.event_name}}</b><br>
+            Mekan: {{this.place_name}}<br>
+            Tarih: {{this.start_date}}<br>
+        </a>
+    {{/each}}
+</ul>

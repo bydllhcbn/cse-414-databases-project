@@ -1,0 +1,22 @@
+<form method="post" action="/user/add">
+    <div class="form-group">
+        <label for="username">Kullanıcı Adı</label>
+        <input autocomplete="off" type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="form-group">
+        <label for="password">Şifre</label>
+        <input autocomplete="off" type="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="form-group">
+        <label for="userRole">Kullanıcı Rolü</label>
+        <select class="form-control" name="userRole" id="userRole">
+            <option value="NORMAL">Normal</option>
+            <option value="ADMIN">Admin</option>
+            <option value="ORGANIZATOR">Organizatör</option>
+            <option value="PLACE_OWNER">Mekan Sahibi</option>
+            <option value="ACTOR">Sanatçı</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

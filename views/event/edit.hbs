@@ -1,0 +1,94 @@
+<form method="post" action="/event/edit">
+    <input type="hidden" value="{{event.id}}" name="eventId"/>
+    {{#ifeq event.is_published 0}}
+
+                <p><b>Etkinliği yayınlamayı tamamlamak için lütfen fiyatları belirleyin.</b></p>
+
+    {{/ifeq}}
+    <div class="form-group">
+        <label for="eventGroupName">Etkinlik Grubu</label>
+        <input required id="eventGroupName" type="text" class="form-control" disabled
+               value="{{eventGroup.event_name}}"/>
+    </div>
+    <input type="hidden" name="placeId" id="placeId" value="{{event.place_id}}"/>
+    <div class="form-group">
+        <label for="place">Mekan</label>
+        <select class="form-control" id="place" disabled>
+            {{#each places}}
+                <option value="{{this.id}}" {{#ifeq ../event.place_id this.id}}
+                        selected {{/ifeq}} >{{this.place_name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="startDate">Başlangıç Tarihi</label>
+                <input disabled required autocomplete="off" class="form-control" id="startDate" name="startDate"
+                       value="{{event.start_date}}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="endDate">Bitiş Tarihi</label>
+                <input disabled autocomplete="off" class="form-control" id="endDate" name="endDate"
+                       value="{{event.end_date}}">
+            </div>
+        </div>
+    </div>
+
+
+    {{#each prices}}
+        <div class="form-group">
+            <label for="price-{{this.id}}">Bilet Fiyatı - {{this.section_name}} </label>
+            <input required class="form-control" id="price-{{this.id}}" type="number" name="price-{{this.id}}"
+                   value="{{this.price}}">
+        </div>
+    {{/each}}
+
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
+<h5 class="card-header mb-2">Etkinlik Kuralları</h5>
+<form action="/event/addRule" method="post">
+    <div class="input-group mb-3">
+        <input type="hidden" name="eventId" value="{{event.id}}">
+        <input type="text" class="form-control" placeholder="Yeni kural ekle" name="rule" id="rule">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Ekle</button>
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    {{#each rules}}
+        <li class="list-group-item">{{this.rule}}</li>
+    {{/each}}
+</ul>
+
+
+<h5 class="card-header mb-2">Reserve Koltuklar</h5>
+<form action="/event/addReservedSeat" method="post">
+    <div class="input-group mb-3">
+        <input type="hidden" name="eventId" value="{{event.id}}">
+
+        <select class="form-control" name="seatId" id="seatId">
+            <option value="-1" disabled selected>Bir koltuk seçin</option>
+            {{#each availableSeats}}
+                <option value="{{this.id}}">{{this.seat_number}} - {{this.section_name}}</option>
+            {{/each}}
+        </select>
+
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Reserve Et</button>
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    {{#each reservedSeats}}
+        <li class="list-group-item">{{this.seat_number}} - {{this.section_name}}</li>
+    {{/each}}
+</ul>

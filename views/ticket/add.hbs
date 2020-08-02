@@ -1,0 +1,35 @@
+<form method="post" action="/ticket/add">
+    <div class="form-group">
+        <label for="user">Kullanıcı</label>
+        <select class="form-control" name="user" id="user">
+            {{#each users}}
+                <option value="{{this.id}}">{{this.username}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Bilet Kategorisi</label>
+        <select class="form-control" name="category" id="category">
+            {{#each ticketCategories}}
+                <option value="{{this.id}}">{{this.category_name}} (%{{this.discount}} indirim)</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="ticket">Biletler</label>
+        <select class="form-control select2" name="ticket" id="ticket">
+            {{#each eventSeats}}
+                <option {{#if this.isReserved}}disabled{{/if}} {{#if this.isSold}}disabled{{/if}}
+                        value="{{this.event_id}}-{{this.seat_id}}">{{#if this.isSold}}(SATILDI){{/if}} {{#if
+                        this.isReserved}}
+                    (RESERVE){{/if}} (Etkinlik: {{this.event_name}}) - (Mekan: {{this.place_name}}) -
+                    (Koltuk: {{this.seat_number}})
+                </option>
+            {{/each}}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>

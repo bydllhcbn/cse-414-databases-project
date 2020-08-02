@@ -1,0 +1,94 @@
+<form method="post" action="/event-group/edit">
+    <input type="hidden" name="id" value="{{eventGroup.id}}">
+    <div class="form-group">
+        <label for="name">İsim</label>
+        <input autocomplete="off" type="text" class="form-control" id="name" name="name"
+               value="{{eventGroup.event_name}}">
+    </div>
+    <div class="form-group">
+        <label for="category">Kategori</label>
+        <select class="form-control" name="category" id="category">
+            {{#each categories}}
+                <option value="{{this.id}}"
+                    {{#ifeq ../eventGroup.category_id this.id}} selected {{/ifeq}}
+                >{{this.category_name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="description">Etkinlik Açıklaması</label>
+        <textarea class="form-control" name="description" id="description"
+                  rows="5">{{eventGroup.event_description}}</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="actors">Sanatçılar</label>
+        <select multiple class="form-control select2" name="actors" id="actors">
+            {{#each actors}}
+                <option value="{{this.id}}"
+                    {{#if this.selected}} selected {{/if}}
+                >{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="musics">Müzikler</label>
+        <select multiple class="form-control select2" name="musics" id="musics">
+            {{#each musics}}
+                <option value="{{this.id}}"
+                    {{#if this.selected}} selected {{/if}}
+                >{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="movies">Filmler</label>
+        <select multiple class="form-control select2" name="movies" id="movies">
+            {{#each movies}}
+                <option value="{{this.id}}"
+                    {{#if this.selected}} selected {{/if}}
+                >{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+<h5 class="card-header mb-2">Galeri Resimleri</h5>
+<form action="/event-group/addImage" method="post">
+    <div class="input-group mb-3">
+        <input type="hidden" name="eventGroupId" value="{{eventGroup.id}}">
+        <input type="text" class="form-control" placeholder="Resim url adresi" name="url" id="url">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Ekle</button>
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    {{#each images}}
+        <li class="list-group-item">{{this.photo_url}}
+            <form action="/event-group/deletePhoto" method="post">
+                <input type="hidden" name="id" value="{{this.id}}"/>
+                <button type="submit" class="btn btn-sm btn-danger" >Sil</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>
+
+
+<h5 class="card-header mb-2">Etkinlikler</h5>
+<ul class="list-group">
+    <a href="/event/add/{{eventGroup.id}}" class="list-group-item list-group-item-action active">+ Yeni Etkinlik
+        Ekle</a>
+    {{#each events}}
+        <a class="list-group-item list-group-item-action" href="/event/edit/{{this.id}}">
+            <b>{{../eventGroup.event_name}}</b><br>
+            Mekan: {{this.place_name}}<br>
+            Tarih: {{this.start_date}}<br>
+        </a>
+    {{/each}}
+</ul>

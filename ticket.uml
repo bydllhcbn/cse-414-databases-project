@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>1a50e7e0-1082-451e-97f5-c78baa0d34d2.SCHEMA:ticket</OriginalElement>
+  <nodes>
+    <node x="2501.560515873016" y="1450.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_prices</node>
+    <node x="438.0" y="1747.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.place_income</node>
+    <node x="638.4753968253973" y="637.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group</node>
+    <node x="1116.625" y="702.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_allowed_categories</node>
+    <node x="1685.3730158730161" y="0.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_countries</node>
+    <node x="900.1250000000001" y="1022.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.actor_events</node>
+    <node x="391.5000000000001" y="1022.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.movie_events</node>
+    <node x="348.0000000000001" y="670.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.movies</node>
+    <node x="1013.125" y="437.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_categories</node>
+    <node x="1675.5605158730161" y="1317.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.sold_tickets</node>
+    <node x="2385.955026455027" y="681.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_sections</node>
+    <node x="1650.8730158730161" y="415.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places</node>
+    <node x="0.0" y="404.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.notifications</node>
+    <node x="1741.6837301587307" y="1001.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seats</node>
+    <node x="649.0" y="1747.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.city</node>
+    <node x="2069.560515873016" y="1471.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_reserved_seat</node>
+    <node x="725.1250000000001" y="979.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_gallery</node>
+    <node x="2613.310515873016" y="956.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.seat_income</node>
+    <node x="1509.2462301587307" y="1471.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_rules</node>
+    <node x="2273.560515873016" y="1438.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_price_update_log</node>
+    <node x="410.0800264550272" y="147.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.users</node>
+    <node x="0.0" y="1747.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.active_users</node>
+    <node x="216.5" y="1022.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.music_events</node>
+    <node x="1963.6230158730161" y="946.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events</node>
+    <node x="1125.291666666667" y="924.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.campaigns</node>
+    <node x="569.1250000000001" y="1001.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.theater_plays</node>
+    <node x="1334.2462301587307" y="1384.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.tickets</node>
+    <node x="206.0" y="1747.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.active_event_groups</node>
+    <node x="936.1250000000001" y="692.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.actors</node>
+    <node x="1872.5605158730161" y="1427.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.available_tickets</node>
+    <node x="1696.8730158730161" y="191.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_cities</node>
+    <node x="173.0" y="670.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.musics</node>
+    <node x="1408.7708333333335" y="1001.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.ticket_categories</node>
+    <node x="1023.0403439153447" y="1383.0">1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.campaign_events</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.users">
+      <point x="-41.5" y="-70.5" />
+      <point x="1692.3730158730161" y="374.0" />
+      <point x="546.5800264550272" y="374.0" />
+      <point x="58.5" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events">
+      <point x="58.125" y="-125.5" />
+      <point x="1469.8712301587307" y="1267.0" />
+      <point x="1974.6944444444448" y="1267.0" />
+      <point x="-66.42857142857133" y="114.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seats" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_sections">
+      <point x="0.0" y="-59.5" />
+      <point x="1825.1837301587307" y="904.0" />
+      <point x="2408.080026455027" y="904.0" />
+      <point x="-66.375" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.ticket_categories">
+      <point x="-19.375" y="-125.5" />
+      <point x="1392.3712301587307" y="1247.0" />
+      <point x="1455.2708333333335" y="1247.0" />
+      <point x="-46.5" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_cities">
+      <point x="41.5" y="-70.5" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.users">
+      <point x="-58.125" y="-125.5" />
+      <point x="1353.6212301587307" y="1277.0" />
+      <point x="162.5" y="1277.0" />
+      <point x="162.5" y="384.0" />
+      <point x="468.5800264550272" y="384.0" />
+      <point x="-19.5" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.actor_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.actors">
+      <point x="34.0" y="-38.5" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.notifications" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.users">
+      <point x="0.0" y="-81.5" />
+      <point x="76.0" y="374.0" />
+      <point x="429.5800264550272" y="374.0" />
+      <point x="-58.5" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.campaign_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="-51.66666666666663" y="-126.5" />
+      <point x="1048.8736772486782" y="1297.0" />
+      <point x="558.6250000000001" y="1297.0" />
+      <point x="558.6250000000001" y="894.0" />
+      <point x="694.7253968253973" y="894.0" />
+      <point x="-33.75" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="-38.75" y="-114.5" />
+      <point x="2002.3730158730161" y="864.0" />
+      <point x="807.2253968253973" y="864.0" />
+      <point x="78.75" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.music_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.musics">
+      <point x="-34.0" y="-38.5" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_categories">
+      <point x="45.0" y="-103.5" />
+      <point x="773.4753968253973" y="617.0" />
+      <point x="1044.125" y="617.0" />
+      <point x="-62.0" y="48.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.sold_tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.ticket_categories">
+      <point x="-66.375" y="-192.5" />
+      <point x="1697.6855158730161" y="1247.0" />
+      <point x="1548.2708333333335" y="1247.0" />
+      <point x="46.5" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.sold_tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places">
+      <point x="-22.125" y="-192.5" />
+      <point x="1741.9355158730161" y="1237.0" />
+      <point x="1701.1837301587307" y="1237.0" />
+      <point x="1701.1837301587307" y="617.0" />
+      <point x="1733.8730158730161" y="617.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_rules" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events">
+      <point x="0.0" y="-38.5" />
+      <point x="1569.2462301587307" y="1277.0" />
+      <point x="1996.837301587302" y="1277.0" />
+      <point x="-44.28571428571422" y="114.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_price_update_log" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_sections">
+      <point x="52.0" y="-71.5" />
+      <point x="2429.560515873016" y="904.0" />
+      <point x="2452.330026455027" y="904.0" />
+      <point x="-22.125" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_gallery" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="0.0" y="-81.5" />
+      <point x="802.6250000000001" y="904.0" />
+      <point x="739.7253968253973" y="904.0" />
+      <point x="11.25" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.campaign_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places">
+      <point x="51.66666666666663" y="-126.5" />
+      <point x="1152.2070105820112" y="1297.0" />
+      <point x="1374.791666666667" y="1297.0" />
+      <point x="1374.791666666667" y="607.0" />
+      <point x="1710.1587301587304" y="607.0" />
+      <point x="-23.71428571428578" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.campaigns" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="-51.66666666666674" y="-136.5" />
+      <point x="1151.125" y="884.0" />
+      <point x="784.7253968253973" y="884.0" />
+      <point x="56.25" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_prices" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events">
+      <point x="-33.75" y="-59.5" />
+      <point x="2535.310515873016" y="1217.0" />
+      <point x="2107.5515873015875" y="1217.0" />
+      <point x="66.42857142857156" y="114.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_prices" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_sections">
+      <point x="33.75" y="-59.5" />
+      <point x="2602.810515873016" y="904.0" />
+      <point x="2496.580026455027" y="904.0" />
+      <point x="22.125" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.movie_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="34.0" y="-38.5" />
+      <point x="493.5000000000001" y="884.0" />
+      <point x="672.2253968253973" y="884.0" />
+      <point x="-56.25" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_sections" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places">
+      <point x="0.0" y="-59.5" />
+      <point x="2474.455026455027" y="607.0" />
+      <point x="1781.3015873015875" y="607.0" />
+      <point x="47.42857142857133" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.music_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="34.0" y="-38.5" />
+      <point x="318.5" y="874.0" />
+      <point x="649.7253968253973" y="874.0" />
+      <point x="-78.75" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.available_tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events">
+      <point x="44.25" y="-82.5" />
+      <point x="2005.3105158730161" y="1297.0" />
+      <point x="2041.1230158730161" y="1297.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seats">
+      <point x="19.375" y="-125.5" />
+      <point x="1431.1212301587307" y="1257.0" />
+      <point x="1762.5587301587307" y="1257.0" />
+      <point x="-62.625" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.seat_income" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seat_sections">
+      <point x="-41.75" y="-104.5" />
+      <point x="2655.060515873016" y="894.0" />
+      <point x="2540.830026455027" y="894.0" />
+      <point x="66.375" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_price_update_log" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events">
+      <point x="-52.0" y="-71.5" />
+      <point x="2325.560515873016" y="1227.0" />
+      <point x="2085.4087301587306" y="1227.0" />
+      <point x="44.28571428571422" y="114.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.movie_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.movies">
+      <point x="-34.0" y="-38.5" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.campaign_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.campaigns">
+      <point x="0.0" y="-126.5" />
+      <point x="1100.5403439153447" y="1287.0" />
+      <point x="1202.791666666667" y="1287.0" />
+      <point x="0.0" y="136.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_allowed_categories" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_categories">
+      <point x="-56.0" y="-38.5" />
+      <point x="1172.625" y="617.0" />
+      <point x="1168.125" y="617.0" />
+      <point x="62.0" y="48.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_reserved_seat" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seats">
+      <point x="-46.0" y="-38.5" />
+      <point x="2115.560515873016" y="1247.0" />
+      <point x="1887.8087301587307" y="1247.0" />
+      <point x="62.625" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.campaigns" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places">
+      <point x="51.66666666666663" y="-136.5" />
+      <point x="1254.4583333333335" y="904.0" />
+      <point x="1351.125" y="904.0" />
+      <point x="1351.125" y="597.0" />
+      <point x="1686.4444444444448" y="597.0" />
+      <point x="-47.42857142857133" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_reserved_seat" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events">
+      <point x="46.0" y="-38.5" />
+      <point x="2207.560515873016" y="1237.0" />
+      <point x="2063.2658730158732" y="1237.0" />
+      <point x="22.14285714285711" y="114.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.campaigns" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_categories">
+      <point x="-1.1368683772161603E-13" y="-136.5" />
+      <point x="1202.7916666666667" y="874.0" />
+      <point x="1106.125" y="874.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.actor_events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="-34.0" y="-38.5" />
+      <point x="934.1250000000001" y="894.0" />
+      <point x="762.2253968253973" y="894.0" />
+      <point x="33.75" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.theater_plays" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group">
+      <point x="0.0" y="-59.5" />
+      <point x="637.1250000000001" y="904.0" />
+      <point x="717.2253968253973" y="904.0" />
+      <point x="-11.25" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.event_group" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.users">
+      <point x="-45.0" y="-103.5" />
+      <point x="683.4753968253973" y="384.0" />
+      <point x="507.5800264550272" y="384.0" />
+      <point x="19.5" y="103.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.seat_income" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places">
+      <point x="41.75" y="-104.5" />
+      <point x="2738.560515873016" y="597.0" />
+      <point x="1805.0158730158732" y="597.0" />
+      <point x="71.14285714285711" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_allowed_categories" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places">
+      <point x="56.0" y="-38.5" />
+      <point x="1284.625" y="587.0" />
+      <point x="1662.730158730159" y="587.0" />
+      <point x="-71.14285714285711" y="70.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.available_tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seats">
+      <point x="-44.25" y="-82.5" />
+      <point x="1916.8105158730161" y="1257.0" />
+      <point x="1846.0587301587307" y="1257.0" />
+      <point x="20.875" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.sold_tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.seats">
+      <point x="22.125" y="-192.5" />
+      <point x="1786.1855158730161" y="1257.0" />
+      <point x="1804.3087301587307" y="1257.0" />
+      <point x="-20.875" y="59.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_cities" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.place_countries">
+      <point x="0.0" y="-59.5" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.VIEW:ticket.sold_tickets" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events">
+      <point x="66.375" y="-192.5" />
+      <point x="1830.4355158730161" y="1287.0" />
+      <point x="2018.980158730159" y="1287.0" />
+      <point x="-22.14285714285711" y="114.5" />
+    </edge>
+    <edge source="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.events" target="1a50e7e0-1082-451e-97f5-c78baa0d34d2.TABLE:ticket.places">
+      <point x="38.75" y="-114.5" />
+      <point x="2079.873015873016" y="617.0" />
+      <point x="1757.587301587302" y="617.0" />
+      <point x="23.71428571428578" y="70.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4215" x="1390.5" y="990.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

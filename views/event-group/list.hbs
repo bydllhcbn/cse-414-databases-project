@@ -1,0 +1,11 @@
+<ul class="list-group">
+    {{#ifeq auth_type 'ADMIN'}}
+        <a href="/event-group/add" class="list-group-item list-group-item-action active">+ Yeni Etkinlik Oluştur</a>
+    {{/ifeq}}
+    {{#ifeq auth_type 'ORGANIZATOR'}}
+        <a href="/event-group/add" class="list-group-item list-group-item-action active">+ Yeni Etkinlik Oluştur</a>
+    {{/ifeq}}
+    {{#each events}}
+        <a class="list-group-item list-group-item-action" href="/event-group/edit/{{this.id}}">{{this.event_name}}</a>
+    {{/each}}
+</ul>

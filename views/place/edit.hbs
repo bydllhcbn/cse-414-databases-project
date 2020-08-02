@@ -1,0 +1,80 @@
+<form method="post" action="/place/edit">
+    <input type="hidden" name="placeId" value="{{place.id}}">
+    <div class="form-group">
+        <label for="city">Şehir</label>
+        <select autocomplete="off" type="text" class="form-control" id="city" name="city">
+
+            {{#each cities}}
+                <option value="{{this.id}}" {{#ifeq ../place.city_id this.id}}
+                        selected {{/ifeq}} >{{this.city_name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="name">İsim</label>
+        <input autocomplete="off" type="text" class="form-control" id="name" name="name" value="{{place.place_name}}">
+    </div>
+    <div class="form-group">
+        <label for="allowedCategories">İzin Verilen Kategoriler</label>
+        <select class="select2 w-100" multiple name="allowedCategories" id="allowedCategories">
+            {{#each categories}}
+                <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.category_name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+<h5 class="card-header mb-2">Koltuk Bölümleri</h5>
+<form action="/place/addSeatSection" method="post">
+    <div class="input-group mb-3">
+        <input type="hidden" name="placeId" value="{{place.id}}">
+        <input type="text" class="form-control" placeholder="Koltuk bölümü ismi" name="name">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Ekle</button>
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    {{#each sections}}
+        <li class="list-group-item" value="{{this.id}}">{{this.section_name}}
+            <form action="/place/deleteSeatSection" method="post">
+                <input type="hidden" name="id" value="{{this.id}}"/>
+                <button type="submit" class="btn btn-sm btn-danger">Sil</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>
+
+<h5 class="card-header mb-2">Koltuklar</h5>
+
+<form action="/place/addSeat" method="post">
+    <input type="hidden" name="placeId" value="{{place.id}}">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <select class="form-control" name="sectionId" id="sectionId">
+                <option value="-1" disabled selected>Bir bölüm seçin</option>
+                {{#each sections}}
+                    <option value="{{this.id}}">{{this.section_name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <input type="text" class="form-control" placeholder="Koltuk numarası" name="seatNumber">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Ekle</button>
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    {{#each seats}}
+        <li class="list-group-item " value="{{this.id}}">
+            {{this.section_name}} - {{this.seat_number}}
+            <form action="/place/deleteSeat" method="post">
+                <input type="hidden" name="id" value="{{this.id}}"/>
+                <button type="submit" class="btn btn-sm btn-danger">Sil</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>

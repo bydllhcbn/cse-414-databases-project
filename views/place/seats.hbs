@@ -1,0 +1,11 @@
+<ul class="list-group">
+    {{#each seats}}
+        <li class="list-group-item">
+            <b>Mekan: </b>{{this.place_name}}<br>
+            <b>Koltuk Numarası: </b>{{this.seat_number}}<br>
+            <b>Toplam Gelir: </b>{{this.total_price}} TL<br>
+            <b>Toplam Satılan Bilet: </b>{{this.total_tickets}}<br>
+
+        </li>
+    {{/each}}
+</ul>

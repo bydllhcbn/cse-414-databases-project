@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <a href="/movie/add" class="list-group-item list-group-item-action active">+ Yeni Film Ekle</a>
+    {{#each movies}}
+        <a class="list-group-item list-group-item-action" href="/movie/edit/{{this.id}}">{{this.name}}</a>
+    {{/each}}
+</ul>

@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <a href="/actor/add" class="list-group-item list-group-item-action active">+ Yeni Sanatçı Ekle</a>
+    {{#each actors}}
+        <a class="list-group-item list-group-item-action" href="/actor/edit/{{this.id}}">{{this.name}}</a>
+    {{/each}}
+</ul>

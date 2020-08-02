@@ -1,0 +1,12 @@
+<ul class="list-group">
+    {{#each tickets}}
+        <li class="list-group-item ">
+            <b>Etkinlik: {{this.event_name}} (<a href="/event/view/{{this.event_id}}">Etkinlik Detayına Git</a>)</b><br>
+            Mekan: {{this.place_name}}<br>
+            Koltuk: {{this.seat_number}}<br>
+            Tarih: {{this.start_date}}<br>
+            Fiyat: {{this.price}} TL
+            <br>
+        </li>
+    {{/each}}
+</ul>

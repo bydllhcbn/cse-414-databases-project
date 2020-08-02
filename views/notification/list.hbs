@@ -1,0 +1,16 @@
+<ul class="list-group">
+    {{#each notifications}}
+        <li class="list-group-item " >
+            <p class="text-gray">
+                {{#ifeq this.is_read 1}}
+                    {{this.text}}
+                    {{else}}
+                    <b>{{this.text}}</b>
+                {{/ifeq}}
+            </p>
+            <small>
+                {{this.created_at}}
+            </small>
+        </li>
+    {{/each}}
+</ul>

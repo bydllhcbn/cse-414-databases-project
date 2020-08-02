@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <a href="/place/add" class="list-group-item list-group-item-action active">+ Yeni Mekan Ekle</a>
+    {{#each places}}
+        <a class="list-group-item list-group-item-action" href="/place/edit/{{this.id}}">{{this.place_name}}</a>
+    {{/each}}
+</ul>

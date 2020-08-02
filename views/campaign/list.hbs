@@ -1,0 +1,23 @@
+<ul class="list-group">
+    <a href="/campaign/add" class="list-group-item list-group-item-action active">+ Yeni Kampanya Oluştur</a>
+    {{#each campaigns}}
+        <li class="list-group-item" href="/campaign/edit/{{this.id}}">{{this.title}}
+            <br>
+            %{{this.discount}} İndirim
+
+            {{#if this.category_name}}
+                <p><b>Kategori:</b> {{this.category_name}}</p>
+            {{/if}}
+            {{#if this.event_name}}
+                <p><b>Etkinlik Grubu:</b> {{this.event_name}}</p>
+            {{/if}}
+            {{#if this.place_name}}
+                <p><b>Mekan:</b> {{this.place_name}}</p>
+            {{/if}}
+              <form action="/campaign/delete" method="post">
+                <input type="hidden" name="id" value="{{this.id}}"/>
+                <button type="submit" class="btn btn-sm btn-danger">Sil</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>

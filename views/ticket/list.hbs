@@ -1,0 +1,30 @@
+
+<h5 class="card-header mb-2">Bilet Kategorileri</h5>
+<form action="/ticket/addTicketCategory" method="post">
+    <div class="input-group mb-3">
+        <input required min="0" max="100" type="number" class="form-control" placeholder="İndirim Yüzdesi (Varsayılan 0)" name="discount" id="discount">
+        <input required type="text" class="form-control" placeholder="Kategori İsmi" name="name" id="name">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Ekle</button>
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    {{#each ticketCategories}}
+        <li class="list-group-item" >{{this.category_name}} (%{{this.discount}} İndirim)</li>
+    {{/each}}
+</ul>
+
+<h5 class="card-header mb-2">Satılan Biletler</h5>
+<ul class="list-group">
+    <a href="/ticket/add" class="list-group-item list-group-item-action active">+ Yeni Bilet Sat</a>
+     {{#each tickets}}
+        <li class="list-group-item " >
+            <b>Etkinlik: {{this.event_name}}</b><br>
+            Mekan: {{this.place_name}}<br>
+            Koltuk: {{this.seat_number}}<br>
+            Kullanıcı: {{this.username}}<br>
+        </li>
+    {{/each}}
+</ul>

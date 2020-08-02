@@ -1,0 +1,65 @@
+<h1>{{eventGroup.event_name}}</h1>
+
+<p><b>Etkinlik Detayı</b></p>
+<p>{{eventGroup.event_description}}</p>
+
+{{#isNotEmpty actors}}
+    <div class="form-group">
+        <label for="actors">Sanatçılar</label>
+        <select disabled multiple class="form-control select2" name="actors" id="actors">
+            {{#each actors}}
+                <option value="{{this.id}}" selected>{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+{{/isNotEmpty}}
+
+{{#isNotEmpty musics}}
+    <div class="form-group">
+        <label for="musics">Müzikler</label>
+        <select disabled multiple class="form-control select2" name="musics" id="musics">
+            {{#each musics}}
+                <option value="{{this.id}}" selected>{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+{{/isNotEmpty}}
+
+{{#isNotEmpty movies}}
+
+    <div class="form-group">
+        <label for="movies">Filmler</label>
+        <select disabled multiple class="form-control select2" name="movies" id="movies">
+            {{#each movies}}
+                <option value="{{this.id}}" selected>{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+{{/isNotEmpty}}
+
+<h5 class="card-header mb-2">Galeri</h5>
+
+
+<div class="row">
+
+    {{#each images}}
+        <div class="col-md-3">
+            <img src="{{this.photo_url}}" alt="" style="width: 100%"/>
+        </div>
+    {{/each}}
+</div>
+
+{{#isEmpty events}}
+    <h4 class="m-4">Etkinlik şuan aktif değil.</h4>
+{{else}}
+    <h5 class="card-header mb-2">Etkinlikler</h5>
+    <ul class="list-group">
+        {{#each events}}
+            <a class="list-group-item list-group-item-action" href="/event/view/{{this.id}}">
+                <b>{{../eventGroup.event_name}}</b><br>
+                Mekan: {{this.place_name}}<br>
+                Tarih: {{this.start_date}}<br>
+            </a>
+        {{/each}}
+    </ul>
+{{/isEmpty}}

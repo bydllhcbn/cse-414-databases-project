@@ -1,0 +1,17 @@
+<ul class="list-group">
+    {{#each events}}
+        <a class="list-group-item list-group-item-action"
+           href="/event-group/{{#ifeq ../auth_type 'ADMIN'}}edit{{else}}view{{/ifeq}}/{{this.id}}">
+            <h5 class="p-1"><b> {{this.event_name}} </b></h5>
+            {{#if photo_url}}
+                <p><img src="{{photo_url}}" alt="" style="height: 150px;"/></p>
+            {{/if}}
+            {{#if event_description}}
+                Açıklama: {{this.event_description}}<br>
+            {{/if}}
+
+            Kategori: {{this.category_name}}<br>
+            Sıradaki Etkinlik Tarihi: {{this.next_event_date}}<br>
+        </a>
+    {{/each}}
+</ul>

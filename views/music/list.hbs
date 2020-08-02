@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <a href="/music/add" class="list-group-item list-group-item-action active">+ Yeni Müzik Ekle</a>
+    {{#each musics}}
+        <a class="list-group-item list-group-item-action" href="/music/edit/{{this.id}}">{{this.name}}</a>
+    {{/each}}
+</ul>

@@ -1,0 +1,31 @@
+<form method="post" action="/event-group/edit">
+    <input type="hidden" name="id" value="{{eventGroup.id}}">
+    <div class="form-group">
+        <label for="name">İsim</label>
+        <input autocomplete="off" type="text" class="form-control" id="name" name="name"
+               value="{{eventGroup.event_name}}">
+    </div>
+    <div class="form-group">
+        <label for="category">Kategori</label>
+        <select class="form-control" name="category" id="category">
+            {{#each categories}}
+                <option value="{{this.id}}"
+                    {{#ifeq ../eventGroup.category_id this.id}} selected {{/ifeq}}
+                >{{this.category_name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+<h5 class="card-header mb-2">Etkinlikler</h5>
+<ul class="list-group">
+    <a href="/event/add/{{eventGroup.id}}" class="list-group-item list-group-item-action active">+ Yeni Etkinlik Ekle</a>
+    {{#each events}}
+        <a class="list-group-item list-group-item-action" href="/event/edit/{{this.id}}">
+            <b>{{../eventGroup.event_name}}</b><br>
+            Mekan: {{this.place_name}}<br>
+            Tarih: {{this.start_date}}<br>
+        </a>
+    {{/each}}
+</ul>
